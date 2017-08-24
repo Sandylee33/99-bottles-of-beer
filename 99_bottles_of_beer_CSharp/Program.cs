@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _bottles_of_beer_CSharp
 {
@@ -6,7 +6,22 @@ namespace _bottles_of_beer_CSharp
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int n = 99;
+            while (n > 1) {
+                Console.WriteLine(n + " bottles of beer on the wall, " + n + " bottles of beer.");
+				Console.WriteLine("Take one down and pass it around, " + (n - 1).ToString() + " bottles of beer on the wall.\n");
+                n = n - 1;
+            }
+            if (n == 1){
+                Console.WriteLine(n + " bottle of beer on the wall, " + n + " bottle of beer.");
+				 Console.WriteLine("Take one down and pass it around, " +  "no more bottles of beer on the wall.\n");
+                n = n - 1;
+            }
+            if (n == 0){
+                n = 99;
+                Console.WriteLine("No more bottles of beer on the wall, no more bottles of beer.");
+                Console.WriteLine("Go to the store and buy some more, "+ n +" bottles of beer on the wall");
+            }
         }
     }
 }
